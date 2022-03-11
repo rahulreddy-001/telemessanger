@@ -1,0 +1,138 @@
+:root {
+  --first-color: #1a73e8;
+  --input-color: #80868b;
+  --border-color: #dadce0;
+
+  --body-font: "Roboto", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.75rem;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+h1 {
+  margin: 0;
+  color: var(--first-color);
+  cursor: pointer;
+}
+.l-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+.form {
+  width: 500px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+.form_title {
+  font-weight: 400;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.form_title .signup0 {
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+}
+.form_title .login1 {
+  min-width: 15vh;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+}
+.form_div {
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+.form_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  outline: none;
+  background: none;
+  z-index: 10;
+}
+.form_label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.25;
+  background-color: #fff;
+  color: var(--input-color);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+}
+.form_button {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: var(--normal-font-size);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form_button:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 15);
+}
+.form_input:focus + .form_label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  z-index: 10;
+  padding: 5px;
+}
+.form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+  top: -0.5rem;
+  font-size: var(--small-font-size);
+  left: 0.8rem;
+  font-weight: 60;
+}
+.form_input:focus {
+  border: 2.5px solid var(--first-color);
+}
+.error-txt {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+}

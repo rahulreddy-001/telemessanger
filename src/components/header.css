@@ -1,0 +1,14 @@
+.header {
+  margin: auto;
+  width: 100%;
+  position: sticky;
+  padding: 10px 0;
+  color: #fff;
+  background-color: rgb(3, 0, 209);
+  top: 0;
+}
+.header_font {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
